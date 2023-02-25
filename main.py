@@ -136,8 +136,9 @@ def dict_work_cash():
         isOpened = fptr.isOpened()
         if isOpened == 0:
             result_dict['status'] = str('no connection')
-            # print('no connection\n')
-        result_dict['status'] = str('connection successful')
+            raise ConnectionError
+        else:
+            result_dict['status'] = str('connection successful')
         # print('connection successful\n')
 
     # Установка параметров
@@ -234,7 +235,7 @@ def dict_work_cash():
 
     except Exception as e:
         print(e)
-        result_dict['status'] = str(e)
+        result_dict['status'] = 'error'
         fptr.close()
     
     
