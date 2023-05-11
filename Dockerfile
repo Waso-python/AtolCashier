@@ -25,6 +25,8 @@ LABEL maintainer="waso"
 COPY ./libfptr10_10.9.4.5_amd64.deb ./
 COPY ./libfptr10.py ./
 COPY ./main.py ./
+COPY ./models.py ./
+COPY ./cash_util.py ./
 COPY ./api_server.py ./
 COPY ./requirements.txt ./
 COPY ./.env ./
