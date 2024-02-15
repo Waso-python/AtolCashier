@@ -64,7 +64,7 @@ def print_part_receipt(receipt:Receipt) -> bool:
             fptr.setParam(IFptr.LIBFPTR_PARAM_COMMODITY_NAME, good.good_name) # Good
             fptr.setParam(IFptr.LIBFPTR_PARAM_QUANTITY, good.good_quantity)
             fptr.setParam(IFptr.LIBFPTR_PARAM_PRICE, good.good_price)
-            fptr.setParam(IFptr.LIBFPTR_PARAM_TAX_TYPE, IFptr.LIBFPTR_TAX_VAT0)
+            fptr.setParam(IFptr.LIBFPTR_PARAM_TAX_TYPE, IFptr.LIBFPTR_TAX_NO)
             fptr.registration()
         
         if receipt.price_card > 0:
@@ -125,7 +125,7 @@ def print_simple_receipt(receipt:Receipt) -> bool:
             fptr.setParam(IFptr.LIBFPTR_PARAM_COMMODITY_NAME, good.good_name) # Good
             fptr.setParam(IFptr.LIBFPTR_PARAM_QUANTITY, good.good_quantity)
             fptr.setParam(IFptr.LIBFPTR_PARAM_PRICE, good.good_price)
-            fptr.setParam(IFptr.LIBFPTR_PARAM_TAX_TYPE, IFptr.LIBFPTR_TAX_VAT0)
+            fptr.setParam(IFptr.LIBFPTR_PARAM_TAX_TYPE, IFptr.LIBFPTR_TAX_NO)
             fptr.registration()
         
         if receipt.is_cash:

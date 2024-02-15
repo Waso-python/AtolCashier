@@ -1,6 +1,6 @@
 import os, json
-
-from robyn import Robyn, jsonify, Request, Response
+from typing import List
+from robyn import Robyn, jsonify, Request, Response, ALLOW_CORS
 from main import dict_work_cash, print_receipt
 from dotenv import load_dotenv
 
@@ -8,10 +8,13 @@ from dotenv import load_dotenv
 # DRIVER_PATH = os.path.join(os.getcwd(), 'fptr10.dll')
 # fptr = IFptr(DRIVER_PATH)
 load_dotenv()
+
 APP_PORT = os.getenv('APP_PORT')
 
 
 app = Robyn(__file__)
+
+
 
 
         
